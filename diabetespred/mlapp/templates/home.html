@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+    background-image: url('https://builtin.com/sites/www.builtin.com/files/styles/og/public/2021-12/machine-learning-examples-applications.png');
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+
+  }
+  h1{
+    color: cyan;
+    
+    text-align: center;
+    margin-top: 150px;
+    background-color: black;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 10px cyan;
+
+  }
+  h1:hover{
+    color: white;
+    background-color: cyan;
+    text-shadow: 2px 1px 2px black;
+  }
+  button{
+    margin: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    border-color: white  ;
+    background-color: white;
+    box-shadow: cyan 0px 5px 15px;
+    cursor: pointer;
+
+  }
+  button:hover{
+    border-color: cyan;
+    background-color: cyan;
+    transition: all 0.5s 0s;
+  }
+</style>
+<h1>DIABETES PREDICTION USING MACHINE LEARNING TECHNIQUES</h1>
+<a href="{% url 'admin' %}"><button type="button" name="button">Admin</button></button></a>
+<a href="{% url 'user' %}" style="text-decoration:none" ><button type="button" name="button">User</button></a>
+
+{% endblock %}

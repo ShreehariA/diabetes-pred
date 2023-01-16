@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+      background-image: url('https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80');
+      background-attachment: fixed;
+      background-position: center;
+  }
+    h1{
+        text-align: center;
+        margin-top: 200px;
+        font-size: xx-large;
+        
+    }
+    button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+
+  }
+  button:hover{
+    color: white;
+    border-color: green;
+    box-shadow: green 0px 5px 15px;
+    background-color: green;
+    border-radius: 20px;
+    transition: all 0.2s 0s;
+    cursor: pointer;
+  }
+</style>
+<h1>Training the Data Model</h1><br>
+<a href="{% url 'train' %}"><button type="button" name="button">Click here to Train the model</button></a>
+{% endblock %}

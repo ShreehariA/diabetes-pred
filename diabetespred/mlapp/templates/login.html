@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+      background-image: url('https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80');
+      background-attachment: fixed;
+      background-position: center;
+  }
+  input{
+    
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+
+  }
+  input:hover{
+    color: white;
+    border-color: green;
+    box-shadow: green 0px 5px 15px;
+    background-color: green;
+    border-radius: 20px;
+    transition: all 0.2s 0s;
+    cursor: pointer;
+  }
+  div{
+    margin-top: 100px;
+  }
+</style>
+<div>
+  <h1>LOGIN</h1>
+<form class="" action="" method="post">
+  <input type="text" name="username" value="" placeholder="Username" required><br><br>
+  <input type="password" name="password" value="" placeholder="Password" required><br><br>
+  <input type="submit" name="" value="Go">
+  {% csrf_token %}
+</form>
+</div>
+
+{% endblock %}

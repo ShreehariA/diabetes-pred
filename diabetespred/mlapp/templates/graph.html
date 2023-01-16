@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  body{
+      background-image: url('https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=829&q=80');
+      background-attachment: fixed;
+      background-position: center;
+  }
+  button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+
+  }
+  button:hover{
+    color: white;
+    border-color: green;
+    box-shadow: green 0px 5px 15px;
+    background-color: green;
+    border-radius: 20px;
+    transition: all 0.2s 0s;
+    cursor: pointer;
+  }
+</style>
+
+<h1>ALGORITHM METRICS AS A GRAPH</h1>
+{% load static %}
+<h1><mark>Logistic Regression</mark></h1>
+<img src="{% static 'logic.jpg' %}" alt="">
+<h1><mark>Adaboost</mark></h1>
+<img src="{% static 'adaboost.jpg' %}" alt="">
+<h1><mark>Decision Tree</mark></h1>
+<img src="{% static 'tree.jpg' %}" alt="">
+<h1><mark>Random Forest</mark></h1>
+<img src="{% static 'randomforest.jpg' %}" alt="">
+<h1><mark>Gaussian Naive Bayes</mark></h1>
+<img src="{% static 'nb.jpg' %}" alt="">
+<h1><mark>k-Nearest Neighbour</mark></h1>
+<img src="{% static 'knn.jpg' %}" alt="">
+<br>
+<br>
+
+<a href="{% url 'home' %}"><button type="button" name="button">Home</button></a>
+
+{% endblock %}

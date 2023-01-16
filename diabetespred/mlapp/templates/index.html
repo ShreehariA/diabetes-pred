@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+  body{
+    background-image: url('https://images.unsplash.com/photo-1614852624331-760256ccea78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-attachment: fixed;
+    background-position: center;
+    color: wheat;
+
+  }
+  h1{
+    color: wheat;
+    background-color: blue;
+    margin: 0px;
+  }
+  input{
+    border-color: aqua;
+    box-shadow: black 0px 5px 15px;
+    text-align: center;
+    padding: 5px;
+  }
+  input:hover{
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+    border-radius: 20px;
+    transition: all 0.2s 0s;
+  }
+  input:focus{
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+    border-radius: 20px;
+    /* border-style: dashed; */
+    transition: all 0.2s 0s;
+  }
+  .result{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: large;
+    border-radius: 10px;
+    border-color: yellow;
+    box-shadow: yellow 0px 5px 15px;
+    background-color: yellow;
+
+  }
+  .result:hover{
+    color: white;
+    border-color: green;
+    box-shadow: green 0px 5px 15px;
+    background-color: green;
+    border-radius: 20px;
+    transition: all 0.2s 0s;
+    cursor: pointer;
+  }
+</style>
+  <h1>DIABETES PREDICTION USING MACHINE LEARNING TECHNIQUES</h1>
+  <form class="" action="{% url 'outcome' %}" method="POST">
+    <table>
+      <tr>
+        <td><h3>Name &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="text" name="name" value="" placeholder="Name" required></td>
+      </tr>
+      <tr>
+        <td><h3>Gender &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><select name="gender" required>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><h3>Mobile Number &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="number" value="+91" placeholder="Mobile Number" required></td>
+      </tr>
+      <tr>
+        <td><h3>Email &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="email" name="email" value="" placeholder="Email Address" required></td>
+      </tr>
+    </table>
+    <br>
+    <h2>METRICS NEEDED FOR THE DIABETES PREDICTION</h2>
+    <table>
+      <tr>
+        <td><h3>Pregnancy&nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Pregnancy" value="" required placeholder="Pregnancy"></td>
+      </tr>
+      <tr>
+        <td><h3>Glucose &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Glucose" value="" required placeholder="Glucose"></td>
+      </tr>
+      <tr>
+        <td><h3>Blood Pressure &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Bp" value="" required placeholder="Bp"></td>
+      </tr>
+      <tr>
+        <td><h3>Skin Thickness &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Skin" value="" required placeholder="Skin Thickness"></td>
+      </tr>
+      <tr>
+        <td><h3>Insulin &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Insulin" value="" required placeholder="Insulin"></td>
+      </tr>
+      <tr>
+        <td><h3>Body Mass Index &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="text" name="Bmi" value="" required placeholder="BMI"></td>
+      </tr>
+      <tr>
+        <td><h3>Diabetes Pedigree Function &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="text" name="Dpf" value="" required placeholder="DPF"></td>
+      </tr>
+      <tr>
+        <td><h3>Age &nbsp;:&nbsp; &nbsp;</h3></td>
+        <td><input type="number" name="Age" value="" required placeholder="Age"></td>
+      </tr>
+    </table>
+    <br>
+    <input  class="result" title="Click here to view result" type="submit" name="" value="Result">
+    {% csrf_token %}
+</form>
+{% endblock %}
